@@ -85,6 +85,8 @@ def main():
                 init_rect = cv2.selectROI(video_name, frame, False, False)
             except:
                 exit()
+            print(init_rect)
+            print(frame.shape)
             tracker.init(frame, init_rect)
             first_frame = False
         else:
